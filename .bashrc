@@ -1,7 +1,7 @@
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 HOMEBREW_NO_ANALYTICS=1
 export PS1="\A \u @ \W \\$  "
-export HOMEBREW_GITHUB_API_TOKEN=54f9cc139852501b8f4fb81e17b7ef4c7be90b4f
+export HOMEBREW_GITHUB_API_TOKEN=[TOKEN]
 
 alias ll='ls -lahG'
 alias home='cd ~'
