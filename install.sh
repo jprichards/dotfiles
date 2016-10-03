@@ -25,12 +25,6 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 defaults write com.apple.finder AppleShowAllFiles TRUE
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-#Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0.02
-
-#Set a shorter Delay until key repeat
-defaults write NSGlobalDomain InitialKeyRepeat -int 12
-
 #Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
