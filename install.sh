@@ -1,9 +1,9 @@
 #!/bin/bash
 
-cp -f ~/.dotfiles/.bash_profile ~
-cp -f ~/.dotfiles/.bashrc ~
-cp -f ~/.dotfiles/.gitignore_global ~
-cp -f ~/.dotfiles/.inputrc ~
+cp -f .bash_profile ~
+cp -f .bashrc ~
+cp -f .gitignore_global ~
+cp -f .inputrc ~
 
 # Show the ~/Library folder
 chflags nohidden ~/Library
