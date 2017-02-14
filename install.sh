@@ -108,12 +108,12 @@ defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
 
 # Name & Password field in Login Window
-sudo defaults write /Library/Preferences/com.apple.loginwindow SHOWFULLNAME -bool TRUE
+# sudo defaults write /Library/Preferences/com.apple.loginwindow SHOWFULLNAME -bool TRUE
 
 # Fast User Switching in Menu Bar
 defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabled -bool YES
 
 # Set computer names
-sudo scutil --set HostName jrichards-mac
-sudo scutil --set ComputerName jrichards-mac
-sudo scutil --set LocalHostName jrichards-mac
+# sudo scutil --set HostName jrichards-mac
+# sudo scutil --set ComputerName jrichards-mac
+# sudo scutil --set LocalHostName jrichards-mac
