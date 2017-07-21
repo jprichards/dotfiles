@@ -1,4 +1,4 @@
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH:/usr/libexec:/usr/local/vfuse/"
 HOMEBREW_NO_ANALYTICS=1
 export PS1="\A \u @ \W \\$  "
 export HOMEBREW_GITHUB_API_TOKEN=[TOKEN]
