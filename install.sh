@@ -1,9 +1,9 @@
 #!/bin/bash
 
-cp -f .bash_profile ~
-cp -f .bashrc ~
-cp -f .gitignore_global ~
-cp -f .inputrc ~
+#cp -f .bash_profile ~
+#cp -f .bashrc ~
+#cp -f .gitignore_global ~
+#cp -f .inputrc ~
 
 # Show the ~/Library folder
 chflags nohidden ~/Library
@@ -49,7 +49,7 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 sudo chflags nohidden /Volumes
 
 # Automatically hide and show the Dock
-defaults write com.apple.dock autohide -bool true
+#defaults write com.apple.dock autohide -bool true
 
 # Set the icon size of Dock items to 22 pixels
 defaults write com.apple.dock tilesize -int 22
@@ -68,8 +68,8 @@ defaults write com.apple.dock launchanim -bool false
 #defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}'
 
 # Bottom right screen corner → Start screen saver
-defaults write com.apple.dock wvous-br-corner -int 5
-defaults write com.apple.dock wvous-br-modifier -int 0
+#defaults write com.apple.dock wvous-br-corner -int 5
+#defaults write com.apple.dock wvous-br-modifier -int 0
 
 # Show the main window when launching Activity Monitor
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
@@ -105,13 +105,13 @@ defaults write com.apple.appstore ShowDebugMenu -bool true
 defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 
 # Install System data files & security updates
-defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
+#defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
 
 # Name & Password field in Login Window
 # sudo defaults write /Library/Preferences/com.apple.loginwindow SHOWFULLNAME -bool TRUE
 
 # Fast User Switching in Menu Bar
-defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabled -bool YES
+#defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabled -bool YES
 
 # Set computer names
 # sudo scutil --set HostName jrichards-mac
