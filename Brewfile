@@ -70,3 +70,14 @@ cask "spectacle"
 cask "suspicious-package"
 cask "textmate"
 cask "vlc"
+mas 'XCode', id: 497799835
+mas '1Password', id: 443987910
+mas 'Howler Timer', id: 428846772
+mas 'Todoist', id: 585829637
+mas 'Battery Health', id: 490192174
+mas 'Extractor', id: 971826370
+mas 'SQLPro for SQLite', id: 586001240
+mas 'Keynote', id: 409183694
+mas 'Todoist', id: 585829637
+mas 'Server', id: 883878097
+mas 'TextWrangler', id: 404010395
