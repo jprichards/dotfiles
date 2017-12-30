@@ -81,3 +81,7 @@ mas 'Keynote', id: 409183694
 mas 'Todoist', id: 585829637
 mas 'Server', id: 883878097
 mas 'TextWrangler', id: 404010395
+mas "Apple Configurator 2", id: 1037126344
+mas "PiPifier", id: 1160374471
+mas "Slack", id: 803453959
+mas "Microsoft Remote Desktop", id: 715768417
