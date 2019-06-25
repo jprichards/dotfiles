@@ -1,9 +1,13 @@
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH:/usr/libexec:/usr/local/vfuse"
+export PATH="/usr/bin:$PATH:/usr/local/bin:/usr/local/sbin:/usr/libexec:/usr/local/vfuse"
 HOMEBREW_NO_ANALYTICS=1
 export PS1="\A \u @ \W \\$  "
 export HOMEBREW_GITHUB_API_TOKEN=[TOKEN]
 
 export LSCOLORS=gxfxcxdxbxegedabagacad
+
+#unified bash history https://gist.github.com/pudquick/c241cb84f28250a77232
+shopt -s histappend
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
 alias ll='ls -lahG'
 alias home='cd ~'
@@ -33,6 +37,11 @@ mcd () {
 ssdir () {
     defaults write com.apple.screencapture location "$1"
     killall SystemUIServer
+}
+
+base64creds () {
+    credentials="$(echo -n "$1:$2" | base64)"
+    echo "Authorization: Basic $credentials"	
 }
 
 movc () {
@@ -66,18 +75,11 @@ mpgc () {
 }
 
 appimg () {
-
   FILE=$1
-  # FILENAME="${FILE%%.*}"
-  # FILEDIR=$(dirname $1)
-  #
-  # mkdir $FILENAME
-  # cd $FILENAME
-
   sips -s format png $1 --out "${FILE%%.*}.png"
   cp $1 "${FILE%%.*}-orig.png"
-  sips -Z 1028 $1
-  cp $1 "${FILE%%.*}-1028.png"
+  sips -Z 1024 $1
+  cp $1 "${FILE%%.*}-1024.png"
   sips -Z 512 $1
   cp $1 "${FILE%%.*}-512.png"
   sips -Z 256 $1
@@ -90,7 +92,12 @@ appimg () {
   cp $1 "${FILE%%.*}-32.png"
   sips -Z 16 $1
   cp $1 "${FILE%%.*}-16.png"
+}
 
-  # echo "Image files stored in $FILENAME"
+tmoff () {
+  sudo sysctl debug.lowpri_throttle_enabled=0
+}
 
+tmon () {
+  sudo sysctl debug.lowpri_throttle_enabled=1
 }
